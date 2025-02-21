@@ -399,33 +399,6 @@ body {
 }
 
 /* Responsive styles */
-@media (max-width: 1440px) {
-    :root {
-        --sidebar-left: 64px;
-        --content-gap: 48px;
-    }
-
-    .project-header,
-    .header-line,
-    .project-image-full {
-        width: 100%;
-        max-width: var(--max-content-width);
-    }
-
-    .project-image-full {
-        height: auto;
-        aspect-ratio: 1100/562.69;
-    }
-
-    .project-intro,
-    .content-section,
-    .about-section,
-    .section {
-        width: 100%;
-        max-width: var(--max-content-width);
-    }
-}
-
 @media (max-width: 1024px) {
     :root {
         --sidebar-left: 32px;
