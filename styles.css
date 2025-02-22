@@ -41,6 +41,8 @@ body {
     --sidebar-left: 146px;
     --content-gap: 75px;
     --max-content-width: 750px;
+    --homepage-image-width: 1100px;
+    --moneypal-image-width: 1200px;
 }
 
 /* Sidebar Navigation */
@@ -174,13 +176,20 @@ body {
     object-fit: cover;
 }
 
-
-.project-image-full
-{
-    width: 100%;
-    max-width: 1200px;
+.project-image-full {
+    width: var(--homepage-image-width);
     height: auto;
     aspect-ratio: 1100/562.69;
+    border-radius: 8px;
+    margin: 0 0 48px;
+    background: #D9D9D9;
+    object-fit: cover;
+}
+
+.moneypal-image {
+    width: var(--moneypal-image-width);
+    height: auto;
+    aspect-ratio: 1200/562.69;
     border-radius: 8px;
     margin: 0 0 48px;
     background: #D9D9D9;
@@ -411,6 +420,13 @@ body {
 }
 
 /* Responsive styles */
+@media (max-width: 1440px) {
+    :root {
+        --homepage-image-width: 100%;
+        --moneypal-image-width: 100%;
+    }
+}
+
 @media (max-width: 1024px) {
     :root {
         --sidebar-left: 32px;
@@ -454,6 +470,13 @@ body {
 
     .project-details {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --homepage-image-width: 100%;
+        --moneypal-image-width: 100%;
     }
 }
 
@@ -524,7 +547,12 @@ body {
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 480px) {
+    :root {
+        --homepage-image-width: 100%;
+        --moneypal-image-width: 100%;
+    }
+
     .nav-links a[href="moneypal.html"] {
         display: none;
     }
